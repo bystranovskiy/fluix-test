@@ -1,0 +1,70 @@
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: $white;
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $text-color;
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.014em;
+}
+
+main {
+  margin-inline: auto;
+  max-width: 974px;
+}
+
+@font-face {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../../../assets/fonts/mont-heavy.woff2') format("woff2"), url('../../../assets/fonts/mont-heavy.woff') format("woff")
+}
+
+.responsive-image {
+  max-width: 100%;
+  display: inline-block;
+  height: auto;
+}
+
+h1, .h1, h2, .h2 {
+  font-family: $font-secondary;
+  color: $title-color;
+  font-weight: 900;
+  line-height: 1.188em;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.3em;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+  @include media-breakpoint-up(md){
+    font-size: 3rem;
+  }
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+  @include media-breakpoint-up(md){
+    font-size: 2rem;
+  }
+}
+
+h3, .h3, h4, .h4 {
+  font-weight: 500;
+}
+
+h3, .h3 {
+  font-size: 1.187rem;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0 0 0.6rem;
+}

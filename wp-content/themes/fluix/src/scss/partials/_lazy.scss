@@ -1,0 +1,23 @@
+.lazy {
+  $default-state: opacity(1) blur(0);
+  $animated-state: opacity(0.5) blur(0.25rem);
+  $transition-value: filter 300ms ease;
+
+  filter: $animated-state;
+  transition: none;
+
+  &--finished {
+    filter: none;
+    transition: none;
+  }
+
+  &--animated {
+    filter: $default-state;
+    transition: $transition-value;
+  }
+
+  &--loaded {
+    filter: $animated-state;
+    transition: $transition-value;
+  }
+}
