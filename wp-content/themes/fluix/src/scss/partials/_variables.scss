@@ -1,6 +1,16 @@
 // Fonts
+@font-face {
+  font-family: 'Mont';
+  src: local('Mont Heavy'), local('Mont-Heavy'),
+  url('../../../assets/fonts/Mont-Heavy.woff2') format('woff2'),
+  url('../../../assets/fonts/Mont-Heavy.woff') format('woff'),
+  url('../../../assets/fonts/Mont-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
 $font-primary:    'Roboto', sans-serif;
-$font-secondary:  'Mont', sans-serif;
+$font-secondary:  'Mont';
 
 // Colors
 $text-color:    #3D5266;
@@ -9,3 +19,9 @@ $brand-color:   #235fbc;
 $icon-color:    #458EF7;
 $sep-color:     #e5f0fe;
 $bg-gradient:   linear-gradient(90deg, rgba(235, 245, 255, 1) 0%, rgba(247, 251, 255, 1) 100%);
+
+// Alt Colors
+$brand-color-v2:   #bc2323;
+$icon-color-v2:    #f74545;
+$sep-color-v2:     #fee5e5;
+$bg-gradient-v2:   linear-gradient(90deg, #ffebeb 0%, #fff7f7 100%);

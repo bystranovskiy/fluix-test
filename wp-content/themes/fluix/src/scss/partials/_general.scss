@@ -19,14 +19,6 @@ main {
   max-width: 974px;
 }
 
-@font-face {
-  font-family: $font-secondary;
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('../../../assets/fonts/mont-heavy.woff2') format("woff2"), url('../../../assets/fonts/mont-heavy.woff') format("woff")
-}
-
 .responsive-image {
   max-width: 100%;
   display: inline-block;
@@ -38,7 +30,6 @@ h1, .h1, h2, .h2 {
   color: $title-color;
   font-weight: 900;
   line-height: 1.188em;
-  letter-spacing: -0.04em;
   margin: 0 0 1.3em;
 }
 

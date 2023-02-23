@@ -5,7 +5,7 @@ import {addLazyLoad} from "../addLazyLoad.js";
 
 addLazyLoad();
 
-const accordions = document.querySelectorAll('.section-accordion.single-mode');
+const accordions = document.querySelectorAll(".section-accordion.single-mode");
 accordions.forEach(function (accordion) {
     const details = accordion.querySelectorAll("details");
     for (let i = 0; i < details.length; i++) {

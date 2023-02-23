@@ -6,10 +6,10 @@
 .section-accordion {
   border-radius: 1rem;
   background-image: $bg-gradient;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 1rem 3rem;
 
   @include media-breakpoint-up(md) {
-    padding: 3rem 2rem 2rem;
+    padding: 3rem 2rem;
   }
 
   @include media-breakpoint-up(lg) {
@@ -46,8 +46,13 @@
       padding: 1rem 3rem 1rem 1rem;
       position: relative;
       list-style: none;
+      -webkit-appearance: none;
       cursor: pointer;
       transition: padding .3s, color .3s;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
 
       &:after {
         content: "";
