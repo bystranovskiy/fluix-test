@@ -1,4 +1,8 @@
-<section class="section-accordion-v2 mb-5 <?php echo get_field('multiple') ? 'multiple-mode' : 'single-mode'; ?>">
+<?php
+$mode = get_field('multiple') ? 'multiple' : 'single';
+$theme = get_field('theme') ? 'secondary' : 'primary';
+?>
+<section class="section-accordion-v2 mb-5" data-mode="<?php echo $mode;?>" data-theme="<?php echo $theme;?>">
 
     <?php if (get_field('title')) { ?>
         <h2 class="px-3"><?php the_field('title'); ?></h2>
@@ -8,9 +12,9 @@
         $i = 0;
         while (have_rows('details')): the_row(); ?>
 
-            <div class="details<?php echo $i === 0 ? ' open' : ''; ?>">
-                <div class="summary h3"><?php the_sub_field('summary'); ?></div>
-                <div class="content">
+            <div class="section-accordion-v2__details<?php echo $i === 0 ? ' section-accordion-v2__details--open' : ''; ?> js--details">
+                <div class="section-accordion-v2__details__summary h3"><?php the_sub_field('summary'); ?></div>
+                <div class="section-accordion-v2__details__content">
                     <div class="row">
                         <div class="col-md-5"><?php the_sub_field('content'); ?></div>
                         <div class="col-md-7">
@@ -23,7 +27,7 @@
                             ?>
                             <picture>
                                 <img
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                        src=<?php echo is_admin() ? $img_src_2x : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=";?>
                                         data-src="<?php echo $img_src_2x; ?>"
                                         data-srcset="<?php echo $img_src_1x; ?> 1x, <?php echo $img_src_2x; ?> 2x"
                                         width="<?php echo $img_width; ?>"

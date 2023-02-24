@@ -31,6 +31,13 @@ Gutenberg block for the section from [Sketch mockup](https://www.sketch.com/s/ed
 <li>The block responsiveness for basic screen size breakpoints has been worked out. The layout approach is mobile first.</li>
 <li>On the main page of my demo, two instances of my Gutenberg block are displayed in two modes. In the first, when one item is revealed, the rest collapse. In the second, the user is allowed to expand all items.</li>
 <li>The whole task with deployment and documentation took about 6 hours.</li>
+<li>
+    <ul>
+        <li>In addition, I implemented another solution with markup on div tags and using the BEM methodology.</li>
+        <li>I Made an optional block color theme switcher.</li>
+        <li>Refactored the code</li>
+    </ul>
+</li>
 </ul>
 
 ---

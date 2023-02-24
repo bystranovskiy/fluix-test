@@ -1,4 +1,8 @@
-<section class="section-accordion mb-5 <?php echo get_field('multiple') ? 'multiple-mode' : 'single-mode'; ?>">
+<?php
+$mode = get_field('multiple') ? 'multiple' : 'single';
+$theme = get_field('theme') ? 'secondary' : 'primary';
+?>
+<section class="section-accordion mb-5" data-mode="<?php echo $mode;?>" data-theme="<?php echo $theme;?>">
 
     <?php if (get_field('title')) { ?>
         <h2 class="px-3"><?php the_field('title'); ?></h2>
@@ -23,7 +27,7 @@
                             ?>
                             <picture>
                                 <img
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                        src=<?php echo is_admin() ? $img_src_2x : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=";?>
                                         data-src="<?php echo $img_src_2x; ?>"
                                         data-srcset="<?php echo $img_src_1x; ?> 1x, <?php echo $img_src_2x; ?> 2x"
                                         width="<?php echo $img_width; ?>"
