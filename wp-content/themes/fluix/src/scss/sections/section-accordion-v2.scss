@@ -23,7 +23,7 @@
   &__details {
     position: relative;
     margin-bottom: 2px;
-    transition: background-color .3s .15s;
+    transition: background-color .3s;
     border-radius: .5rem;
 
     &:hover {
@@ -45,7 +45,7 @@
       padding: 1rem 3rem 1rem 1rem;
       position: relative;
       cursor: pointer;
-      transition: padding .3s .15s, color .3s .15s;
+      transition: padding .3s, color .3s;
 
       &:after {
         content: "";
@@ -65,21 +65,20 @@
     }
 
     &__content {
-      padding: 0 1rem;
-      transition: padding .3s, max-height .3s;
+      padding: 0 2rem;
       overflow: hidden;
-      max-height: 0;
+      transition: height .3s;
+      height: 0;
+      display: none;
     }
 
-    &--open {
+    &[open] {
       background-color: $white;
-      transition: background-color .3s;
       overflow: hidden;
 
       .section-accordion-v2__details__summary {
         padding: 1rem 3rem 1rem 2rem;
         color: $title-color;
-        transition: padding .3s, color .3s;
 
         &:after {
           transform: translateY(-50%) rotate(225deg);
@@ -87,15 +86,14 @@
       }
 
       .section-accordion-v2__details__content {
-        padding: 0 2rem .2rem;
-        max-height: 1000px;
-        transition: background-color .3s, max-height 1s;
+        display: block;
       }
+
     }
 
   }
 
-  &[data-theme="secondary"] {
+  &--theme-secondary {
     background-image: $bg-gradient-v2;
 
     .section-accordion-v2__details {
