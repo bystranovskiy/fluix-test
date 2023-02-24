@@ -2,7 +2,7 @@
 $mode = get_field('multiple') ? 'multiple' : 'single';
 $theme = get_field('theme') ? 'secondary' : 'primary';
 ?>
-<section class="section-accordion-v2 section-accordion-v2--theme-<?php echo $theme; ?> mb-5"
+<section class="section-accordion-v3 section-accordion-v3--theme-<?php echo $theme; ?> mb-5"
          data-mode="<?php echo $mode; ?>">
 
     <?php if (get_field('title')) { ?>
@@ -13,9 +13,9 @@ $theme = get_field('theme') ? 'secondary' : 'primary';
         $i = 0;
         while (have_rows('details')): the_row(); ?>
 
-            <div class="section-accordion-v2__details js--toggle"<?php if ($i === 0 && is_admin()) : echo ' open'; endif;?>>
-                <div class="section-accordion-v2__details__summary h3"><?php the_sub_field('summary'); ?></div>
-                <div class="section-accordion-v2__details__content js--content"<?php if ($i === 0 && is_admin()) {?> style="height:auto;"<?php }?>>
+            <div class="section-accordion-v3__details js--toggle"<?php if ($i === 0 && is_admin()) : echo ' open'; endif;?>>
+                <div class="section-accordion-v3__details__summary h3"><?php the_sub_field('summary'); ?></div>
+                <div class="section-accordion-v3__details__content js--content"<?php if ($i === 0 && is_admin()) {?> style="height:auto;"<?php }?>>
                     <div class="row">
                         <div class="col-md-5"><?php the_sub_field('content'); ?></div>
                         <div class="col-md-7">

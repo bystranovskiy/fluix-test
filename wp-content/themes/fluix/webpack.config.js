@@ -16,6 +16,7 @@ module.exports = {
 
         "section-accordion":            "./src/js/sections/section-accordion.es6",
         "section-accordion-v2":         "./src/js/sections/section-accordion-v2.es6",
+        "section-accordion-v3":         "./src/js/sections/section-accordion-v3.es6",
     },
 
     output: {

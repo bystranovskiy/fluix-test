@@ -33,8 +33,12 @@ accordions.forEach(function (accordion) {
             if (accordion.getAttribute("data-mode") === "single") {
                 for (let j = 0; j < toggles.length; j++) {
                     if (i !== j) {
-                        toggles[j].removeAttribute("open");
                         toggles[j].querySelector(".js--content").style.height = '0px';
+                        content.addEventListener('transitionend', function () {
+                            toggles[j].removeAttribute("open");
+                        }, {
+                            once: true
+                        });
                     }
                 }
             }

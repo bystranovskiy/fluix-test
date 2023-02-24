@@ -3,7 +3,7 @@
 @import "../bootstrap/variables";
 @import "../bootstrap/mixins";
 
-.section-accordion-v2 {
+.section-accordion-v3 {
   border-radius: 1rem;
   background-image: $bg-gradient;
   padding: 2rem 1rem 3rem;
@@ -66,9 +66,9 @@
 
     &__content {
       padding: 0 2rem;
-      overflow: hidden;
-      transition: height .3s;
-      height: 0;
+      //overflow: hidden;
+      //transition: height .3s;
+      //height: 0;
       display: none;
     }
 
@@ -76,7 +76,7 @@
       background-color: $white;
       overflow: hidden;
 
-      .section-accordion-v2__details__summary {
+      .section-accordion-v3__details__summary {
         padding: 1rem 3rem 1rem 2rem;
         color: $title-color;
 
@@ -85,8 +85,8 @@
         }
       }
 
-      .section-accordion-v2__details__content {
-        display: block;
+      .section-accordion-v3__details__content {
+        //display: block;
       }
 
     }
@@ -96,7 +96,7 @@
   &--theme-secondary {
     background-image: $bg-gradient-v2;
 
-    .section-accordion-v2__details {
+    .section-accordion-v3__details {
       transition: background-color .3s;
       &:after {
         background-color: $sep-color-v2;
