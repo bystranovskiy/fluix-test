@@ -17,11 +17,12 @@ Gutenberg block for the section from [Sketch mockup](https://www.sketch.com/s/ed
 <li>Created a separate category "Fluix" for my gutenberg blocks.</li>
 <li>To implement the backend part, the ACF Pro plugin with the ACF Extended extension is used.</li>
 <li>Created appropriate ACF fields for the Gutender block (text title, item repeater with image and text content, block mode switcher).</li>
-<li>In the layout of the markup, I used semantic HTML tags: main, section, details, picture.</li>
+<li>I Made an optional block color theme switcher, single/multiple mode and 'is first open' mode.</li>
 <li>Attributes for alternative srcset resources are used to display images.</li>
+<li>Implemented markup using the BEM methodology.</li>
 <li>The provided library for LazyLoad is used.</li>
 <li>Custom javascript is written in VanillaJS without the use of third-party libraries, according to the terms of the task.</li>
-<li>Connected font "Roboto" from google fonts (weight 400 and 500) asynchronously.</li>
+<li>Connected font "Roboto" from Google fonts (weight 400 and 500) asynchronously.</li>
 <li>Font "Mont-heavy" for headings borrowed from the Fluix site and included locally.</li>
 <li>Webpack builder is used to build SCSS and javascript.</li>
 <li>The style normalizer normalize.css is used.</li>
@@ -31,13 +32,6 @@ Gutenberg block for the section from [Sketch mockup](https://www.sketch.com/s/ed
 <li>The block responsiveness for basic screen size breakpoints has been worked out. The layout approach is mobile first.</li>
 <li>On the main page of my demo, two instances of my Gutenberg block are displayed in two modes. In the first, when one item is revealed, the rest collapse. In the second, the user is allowed to expand all items.</li>
 <li>The whole task with deployment and documentation took about 6 hours.</li>
-<li>
-    <ul>
-        <li>In addition, I implemented another solution with markup on div tags and using the BEM methodology.</li>
-        <li>I Made an optional block color theme switcher.</li>
-        <li>Refactored the code</li>
-    </ul>
-</li>
 </ul>
 
 ---
